@@ -27,7 +27,7 @@
           v-model="context"
           :subfield="false"
           :toolbars="toolbars"
-          @keydown="publish()"
+           @change="changeContext"
           @imgAdd="imgAdd"
         />
       </div>
@@ -82,12 +82,18 @@ export default {
      var $vm = this;
   },
   methods: {
+    //直接用mavon-editor自带的change事件用参数接受marked后的html内容
+    changeContext(value,reder){
+      this.context_html = reder;
+       console.log(this.context_html);
+    },
     publish() {
       console.log(this.selected_option);
-      console.log(this.title);
-      //将markdown绑定的内容转换为HTML格式,此处引用了marked
-      this.context = marked(this.context);
-      console.log(this.context);
+      //console.log(this.title);
+      //1.引用将markdown绑定的内容转换为HTML格式,此处引用了marked
+      // this.context = marked(this.context);
+      //2.直接用mavon-editor自带的change事件用参数接受marked后的html内容。
+     // console.log(this.context);
       //将选项转换为api接受的值--之前传的汉字一直报422
       if (this.selected_option == "问答") {
         this.selected_option = "ask";

@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "marked": "^0.6.2",
+    "marked": "^0.7.0",
     "mavon-editor": "^2.7.4",
     "muse-ui": "^3.0.2",
     "timeago.js": "^3.0.2",

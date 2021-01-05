@@ -12,7 +12,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "marked": "^0.6.2",
     "mavon-editor": "^2.7.4",
     "muse-ui": "^3.0.2",
